@@ -6,11 +6,11 @@
     {
       "label": "Build",
       "type": "shell",
-      "command": "cd app && west build",
+      "command": "cd app && west build -d build/left -b nice_nano_v2 -- -DZMK_CONFIG=\"/workspaces/zmk-config/config\" -DSHIELD=kyria_rev2_left && west build -d build/right -b nice_nano_v2 -- -DZMK_CONFIG=\"/workspaces/zmk-config/config\" -DSHIELD=kyria_rev2_right",
       "group": {
         "kind": "build",
         "isDefault": true
-      }
+      },
     },
     {
       "label": "Flash",
